@@ -1,0 +1,28 @@
+https://school.programmers.co.kr/learn/courses/30/lessons/12906
+
+import java.util.*;
+
+public class Solution {
+    public int[] solution(int []arr) {
+        //선언 및 초기화
+        int v = -1;
+        List<Integer> list = new ArrayList<Integer>();
+        
+        //연속된 숫자 제거를 위해서
+        //arr에서 받아온 배열에서 중복 빼고 리스트에 추가
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] != v){
+                list.add(arr[i]);
+                v = arr[i];
+            }
+        }
+        
+        //ArrayList를 배열로 전환
+        int[] returnArr = new int[list.size()];
+        for(int i = 0; i < list.size(); i++){
+            returnArr[i] = list.get(i);
+        }
+        
+        return returnArr;
+    }
+}
