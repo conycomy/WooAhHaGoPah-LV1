@@ -45,7 +45,7 @@ public class Main {
         
         ArrayStack(10);
         push(10);
-        pop(10);
+        pop();
 
     }
 
