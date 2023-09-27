@@ -1,0 +1,25 @@
+import java.util.*;
+class Solution {
+    public int solution(int[] numbers) {
+        int answer = 0;
+        List<Integer> list = new ArrayList<Integer>();
+        
+        for(int i = 0; i < numbers.length; i++){
+            list.add(numbers[i]);
+        }
+        
+        //리스트에 포함되어있지 않을 때에만 변수를 추가
+        for(int i = 0; i <= 9; i++){
+            if(list.contains(i)){
+                continue;
+            }
+            else {
+                answer += i;
+            }
+        }
+        
+        return answer;
+        
+        
+    }
+}
